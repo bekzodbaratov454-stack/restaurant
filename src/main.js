@@ -11,6 +11,9 @@ import cors from "cors";  // connection with front
 import { ErrorHandlerMiddleware } from "./middlewares/error.handler.js";
 
 
+import dns from "node:dns/promises";
+dns.setServers(["8.8.8.8" , "1.1.1.1"]);
+
 
 const app = express();
 
